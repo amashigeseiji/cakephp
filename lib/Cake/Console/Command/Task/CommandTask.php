@@ -118,7 +118,7 @@ class CommandTask extends AppShell {
 			$methodNames[] = $method->getName();
 		}
 
-		$return += array_diff($methodNames, $shellMethodNames);
+		$return = array_merge($return, array_diff($methodNames, $shellMethodNames));
 		sort($return);
 
 		return $return;
